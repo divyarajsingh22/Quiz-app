@@ -31,7 +31,7 @@ function App() {
 
           {/* User Routes */}
           <Route
-            path="/"
+            path="/home"
             element={
               <ProtectedRoute>
                 <Home />

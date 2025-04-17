@@ -1,0 +1,203 @@
+/* Register.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Container styles with university background */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+/* Semi-transparent overlay */
+.register-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 37, 63, 0.75);
+  z-index: 1;
+}
+
+/* Card styles */
+.register-card {
+  width: 430px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.7s ease-out;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Header styles */
+.register-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.register-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d253f;
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: 'Lora', serif;
+}
+
+.university-tagline {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: #4a6fa5;
+  margin-top: 8px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.register-header i {
+  margin-left: 10px;
+  color: #14539a;
+  font-size: 26px;
+  vertical-align: middle;
+}
+
+/* Divider styles */
+.register-divider {
+  height: 3px;
+  background: linear-gradient(to right, #0d253f, #1c5fab);
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+/* Form styles */
+.register-form {
+  margin-top: 15px;
+}
+
+.register-form .ant-form-item {
+  margin-bottom: 22px;
+}
+
+.register-form .ant-form-item-label > label {
+  color: #0d253f;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d4e0f1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+  background-color: #f9fafc;
+}
+
+.register-form input:focus {
+  border-color: #1c5fab;
+  box-shadow: 0 0 0 2px rgba(28, 95, 171, 0.2);
+  outline: none;
+}
+
+.register-form input::placeholder {
+  color: #a0aec0;
+}
+
+/* Button and link styles */
+.register-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  background: #0d253f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(13, 37, 63, 0.3);
+}
+
+.register-button:hover {
+  background: #14539a;
+  box-shadow: 0 6px 15px rgba(13, 37, 63, 0.4);
+  transform: translateY(-2px);
+}
+
+.register-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(13, 37, 63, 0.4);
+}
+
+.login-link {
+  text-align: center;
+  color: #14539a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s;
+  display: block;
+  margin-top: 5px;
+}
+
+.login-link:hover {
+  color: #0d253f;
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.ant-form-item-explain-error {
+  color: #e53e3e;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .register-card {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  
+  .register-header h1 {
+    font-size: 24px;
+  }
+}
